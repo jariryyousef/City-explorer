@@ -34,7 +34,7 @@ export class App extends React.Component {
     const serverURL = `${process.env.REACT_APP_SERVER_URL}/weather?searchQ=${this.state.locationName}`;
     const serverResponse = await axios.get(serverURL);
   
-    const serverURL1=`${process.env.REACT_APP_SERVER_URL}/movie?searchQ=${this.state.locationName}`;
+    const serverURL1=`${process.env.REACT_APP_SERVER_URL}/movies?searchQ=${this.state.locationName}`;
     const serverResponse1 = await axios.get(serverURL1);
 
     console.log(serverResponse1.data);
@@ -73,7 +73,7 @@ export class App extends React.Component {
         <p>lat: {this.state.locationData.lat}</p>
         <p>lon: {this.state.locationData.lon}</p>
         {/* <p>{this.state.serverResponse}</p> */}
-        {console.log(this.state.locationInfo+"test")}
+        {/* {console.log(this.state.locationInfo+"test")} */}
       
             <Card>
           <Card.Text>
